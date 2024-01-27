@@ -19,8 +19,8 @@ federal_tax = purchase_amount * 0.05
 regional_tax = purchase_amount * 0.025
 total_tax = federal_tax + regional_tax
 total_sle_amount = purchase_amount + total_tax
-print(f'Purchase amount: {purchase_amount}, Federal tax: {federal_tax},'
-      f'\nRegional tax: {regional_tax}, Total tax: {total_tax}, Total sales amount: {total_sle_amount}')
+print(f'Purchase amount: {purchase_amount} \nFederal tax: {federal_tax}'
+      f'\nRegional tax: {regional_tax} \nTotal tax: {total_tax} \nTotal sales amount: {total_sle_amount}')
 
 # Task 4
 # Сделайте так, чтобы число секунд отображалось в виде <дни:часы:минуты:секунды>.
@@ -35,9 +35,11 @@ print(f'There is {days} days {hours} hours {minutes} minutes and {seconds} in {t
 
 # Task 5
 # При заданном целом числе n посчитайте n + nn + nnn.
+# Попробуй подставить вместо 10 цифру 5, и у тебя должно получаться 5 + 55 + 555 = 615
+# в твоем варианте должно быть 10 + 110 + 1110 = 1230
 my_number = 10
+print(my_number + my_number * 11 + my_number * 111)
 
-print(int(my_number) + int(my_number) * 2 + int(my_number) * 3)
 
 # Task 6
 speed_in_km_h = 1000
