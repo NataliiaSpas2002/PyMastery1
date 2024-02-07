@@ -8,7 +8,7 @@ weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 
 daily_sales_volume = []
 
 for day in weekdays:
-    sales_volume = input(f'Pleas enter daily sales volume: ')
+    sales_volume = input(f'Pleas enter daily sales volume on {day}: ')
     daily_sales_volume.append(int(sales_volume))
 
 total_sales = sum(daily_sales_volume)
@@ -16,7 +16,7 @@ total_sales = sum(daily_sales_volume)
 for i in range(len(weekdays)):
     day = weekdays[i]
     sales_volume = daily_sales_volume[i]
-    print(f'{day}: {sales_volume}')
+    print(f'{day}: \t {sales_volume}')
 
 print(f'Sales volume from Monday to Sunday: {daily_sales_volume}')
 print(f'Weekly sales volume: {total_sales}')
