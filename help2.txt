@@ -1,0 +1,39 @@
+# Используйте функцию help() и передайте ей 5 методов словаря.
+
+copy(...)
+ |      D.copy() -> a shallow copy of D поверхностная копия
+ |original_dict = {'a': 1, 'b': 2, 'c': 3}
+ |copied_dict = original_dict.copy()
+ |copied_dict['a'] = 100
+ |original dictionary: {'a': 1, 'b': 2, 'c': 3}
+ | copied dictionary: {'a': 100, 'b': 2, 'c': 3}
+
+ |  get(self, key, default=None, /)
+ |      Return the value for key if key is in the dictionary, else default.
+ |original_dict = {'a': 1, 'b': 2, 'c': 3}
+ |my_key = original_dict.get('b')
+ |my_key
+ |2
+
+ |  items(...)
+ |      D.items() -> a set-like object providing a view on D's items
+ |my_dict = {'a': 1, 'b': 2, 'c': 3}
+  new_dict = my_dict.items()
+  new_dict
+  dict_items([('a', 1), ('b', 2), ('c', 3)])
+
+ |  keys(...)
+
+ |      D.keys() -> a set-like object providing a view on D's keys
+ |my_dict.keys()
+  dict_keys(['a', 'b', 'c'])
+
+ |      D.pop(k[,d]) -> v, remove specified key and return the corresponding value.
+ |
+ |      If the key is not found, return the default if given; otherwise,
+ |      raise a KeyError.
+ | original_dict = {'a': 1, 'b': 2, 'c': 3}
+   original_dict.pop('a')
+   1
+   original_dict
+   {'b': 2, 'c': 3}

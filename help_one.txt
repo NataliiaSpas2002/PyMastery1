@@ -1,0 +1,237 @@
+Help on class set in module builtins:
+class set(object)
+ |  set() -> new empty set object
+ |  set(iterable) -> new set object
+ |
+ |  Build an unordered collection of unique elements.
+ |
+ |  Methods defined here:
+ |
+ |  __and__(self, value, /)
+ |      Return self&value.
+ |
+ |  __contains__(...)
+ |      x.__contains__(y) <==> y in x.
+ my_set = {1, 10, 15, 22, 7}
+ |my_set.__contains__(2)
+False
+my_set.__contains__(22) to check for membership in a set
+True
+ |  __eq__(self, value, /)
+ |      Return self==value.
+ |
+ |  __ge__(self, value, /)  This method is called when you use the >= operator to compare two objects.
+ |      Return self>=value.
+ |
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |
+ |  __gt__(self, value, /)
+ |      Return self>value.
+ |
+ |  __iand__(self, value, /)
+ |      Return self&=value.
+ |
+ |  __init__(self, /, *args, **kwargs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |For sets, the __init__ method is called when a new set object is created,
+ |allowing you to perform any necessary setup or initialization.
+ |  __ior__(self, value, /)
+ |      Return self|=value.
+ |
+ |  __isub__(self, value, /)
+ |      Return self-=value.
+ |
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |
+ |  __ixor__(self, value, /)
+ |      Return self^=value.
+ |
+ |  __le__(self, value, /)
+ |      Return self<=value.
+ |
+ |  __len__(self, /)
+ |      Return len(self).
+ |
+ |  __lt__(self, value, /)
+ |      Return self<value.
+ |
+ |  __ne__(self, value, /)
+ |      Return self!=value.
+ |
+ |  __or__(self, value, /)
+ |      Return self|value.
+ |
+ |  __rand__(self, value, /)
+ |      Return value&self.
+ |
+ |  __reduce__(...)
+ |      Return state information for pickling.
+ |
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |
+ |  __ror__(self, value, /)
+ |      Return value|self.
+ |
+ |  __rsub__(self, value, /)
+ |      Return value-self.
+ |
+ |  __rxor__(self, value, /)
+ |      Return value^self.
+ |
+ |  __sizeof__(...)
+ |      S.__sizeof__() -> size of S in memory, in bytes
+ |
+ |  __sub__(self, value, /)
+ |      Return self-value.
+ |
+ |  __xor__(self, value, /)
+ |      Return self^value.
+ |
+ |  add(...)
+ |      Add an element to a set.
+ |
+ |      This has no effect if the element is already present.
+ |my_set = {1, 2, 3}
+ |my_set.add(4)
+ |print(my_set)
+ |{1, 2, 3, 4}
+
+ |  clear(...)
+ |      Remove all elements from this set.
+ |my_set.clear()
+ |print(my_set)
+ |set()
+ |  copy(...)
+ |      Return a shallow copy of a set.
+ |my_set = {1, 2, 3, 4}
+my_new_set = my_set.copy()
+my_new_set
+{1, 2, 3, 4}
+ |  difference(...)
+ |      Return the difference of two or more sets as a new set.
+ |
+ |      (i.e. all elements that are in this set but not the others.)
+ |set1 = {1, 2, 3, 4, 5}
+set2 = {3, 4, 5, 6, 7}
+set3 = set1.difference(set2)
+set3
+{1, 2}
+
+ |  difference_update(...)
+ |      Remove all elements of another set from this set.
+
+ |unlike difference(), difference_update() modifies
+ the calling set and does not return a new set.
+
+ |  discard(...)
+ |      Remove an element from a set if it is a member.
+ |
+ |      Unlike set.remove(), the discard() method does not raise
+ |      an exception when an element is missing from the set.
+ |my_set = {1, 2, 3, 4, 5}
+my_set.discard(3)
+my_set
+{1, 2, 4, 5}
+
+ |  intersection(...)
+ |      Return the intersection of two sets as a new set.
+ |
+ |      (i.e. all elements that are in both sets.)
+ |set1 = {1, 2, 3, 4, 5}
+set2 = {3, 4, 5, 6, 7}
+result_set = set1.intersection(set2)
+print(result_set)
+{3, 4, 5}
+
+ |  intersection_update(...)
+ |      Update a set with the intersection of itself and another.
+ |set1 = {1, 2, 3, 4, 5}
+set2 = {3, 4, 5, 6, 7}
+result = set1.intersection_update(set2)
+set1
+{3, 4, 5}
+
+ |  isdisjoint(...)
+ |      Return True if two sets have a null intersection.
+ |set1 = {1, 2, 3}
+set2 = {4, 5, 6}
+set1.isdisjoint(set2)
+True
+
+ |  issubset(...)
+ |      Report whether another set contains this set.
+ |set1 = {1, 2, 3}
+set2 = {1, 2, 3, 4, 5}
+set1.issubset(set2)
+True
+
+ |  issuperset(...)
+ |      Report whether this set contains another set.
+ |set1 = {1, 2, 3}
+set2 = {1, 2, 3, 4, 5}
+set2.issuperset(set1)
+True
+ |  pop(...)
+ |      Remove and return an arbitrary set element.
+ |      Raises KeyError if the set is empty.
+ |set2 = {1, 2, 3, 4, 5}
+set2.pop()
+1
+set2
+{2, 3, 4, 5}
+ |  remove(...)
+ |      Remove an element from a set; it must be a member.
+ |
+ |      If the element is not a member, raise a KeyError.
+ |set2.remove(4)
+set2
+{2, 3, 5}
+ |  symmetric_difference(...)
+ |      Return the symmetric difference of two sets as a new set.
+ |
+ |      (i.e. all elements that are in exactly one of the sets.)
+ |set1 = {1, 2, 3, 10, 20}
+set2 = {1, 2, 3, 4, 5}
+set1.symmetric_difference(set2)
+{4, 5, 20, 10}
+ |  symmetric_difference_update(...)
+ |      Update a set with the symmetric difference of itself and another.
+ |set1 = {1, 2, 3, 10, 20}
+set2 = {1, 2, 3, 4, 5}
+set1.symmetric_difference_update(set2)
+set1
+{20, 4, 5, 10}
+
+ |  union(...)
+ |      Return the union of sets as a new set.
+ |
+ |      (i.e. all elements that are in either set.)
+ |set1 = {1, 2, 3, 10, 20}
+set2 = {1, 2, 3, 4, 5}
+union_set = set1.union(set2)
+union_set
+{1, 2, 3, 4, 5, 10, 20}
+ |  update(...)
+ |      Update a set with the union of itself and others.
+ |set1.update(set2)
+set1
+{1, 2, 3, 4, 5, 10, 20}
+ |  ----------------------------------------------------------------------
+ |  Class methods defined here:
+ |
+ |  __class_getitem__(...) from builtins.type
+ |      See PEP 585
+ |
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |
+ |  __hash__ = None
